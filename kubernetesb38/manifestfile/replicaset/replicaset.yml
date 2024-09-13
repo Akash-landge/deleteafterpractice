@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind:  ReplicaSet
 metadata: 
-       name: webappreplica
+       name: studentappreplica
        labels:
-            app: webappreplica
+            app: studentappreplica
 spec: 
     replicas: 3  #how many replica's you want to create on the basis of template
     template:
       metadata:  #like a tag
          labels: 
-            app: webappreplica
+            app: studentappreplica
       spec:
         containers:
             - name: mypod-cont1
@@ -24,4 +24,4 @@ spec:
                   protocol: TCP
     selector: 
           matchExpressions: 
-            - {key: app, operator: In, values: [webappreplica, mobappreplica]}
+            - {key: app, operator: In, values: [studentappreplica, todoappreplica]}

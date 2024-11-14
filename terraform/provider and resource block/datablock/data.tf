@@ -1,13 +1,14 @@
+# data.tf
+data "aws_ami" "this_batch38_ami" {
+  most_recent = true
+  owners      = ["self"]
 
-data "aws_ami" "this_boxer_ami" {
-    name_regex       = "batch38_ami"
-      filter {
+  filter {
     name   = "name"
     values = ["batch38_ami"]
-    }
-
+  }
 }
 
 data "aws_security_group" "default" {
-  name = "default"  #var.vpc_security_group_ids[2]
+  name = "default"
 }

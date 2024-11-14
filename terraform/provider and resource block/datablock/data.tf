@@ -1,9 +1,9 @@
 
 data "aws_ami" "this_boxer_ami" {
-    name_regex       = "boxer_ami"
+    name_regex       = "batch38_ami"
       filter {
     name   = "name"
-    values = ["boxer_ami"]
+    values = ["batch38_ami"]
     }
 
 }
